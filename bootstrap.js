@@ -72,7 +72,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="usb://1002/UUI/"
+	var path="/sdcard/Android/tabs_backup/"
 	
 	var d=new Date()
 	try{
@@ -90,7 +90,8 @@ function exportTabs(window){
 	
 	console.log(path);
 	
-	var file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsILocalFile);
+	//var file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsILocalFile);
+	var file = new FileUtils.File(path);
 	console.log("after file");
 	file.initWithPath(path);
 	console.log("after init");
