@@ -57,7 +57,7 @@ function exportTabs(window){
 	}
 	
 			
-	
+	return;
 	res=res.join("\r\n")
 	
 	try
