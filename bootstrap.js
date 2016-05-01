@@ -72,7 +72,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="file:///Writer/"
+	var path="usb://1002/UUI/"
 	
 	var d=new Date()
 	try{
