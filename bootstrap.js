@@ -43,7 +43,7 @@ function exportTabs(window){
 		    if(addr!="about:blank" && addr!="about:home")
 		      res.push(addr)
 		    else{
-		    	
+		    	return;
 		    	var tb = tab.browser;
 		    	var ssdata = tb.__SS_data;
 		    	var tbssentries = ssdata.entries;
