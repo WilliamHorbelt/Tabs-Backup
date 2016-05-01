@@ -73,7 +73,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="/storage/emulated/0/Writer/"
+	var path="file:///storage/emulated/0/Writer/"
 	
 	var d=new Date()
 	try{
