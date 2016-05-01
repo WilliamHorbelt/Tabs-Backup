@@ -72,7 +72,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="file:///sdcard/Android/tabs_backup/"
+	var path="file:///storage/sdcard0/Writer/"
 	
 	var d=new Date()
 	try{
