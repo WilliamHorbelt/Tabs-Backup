@@ -45,7 +45,7 @@ function exportTabs(window){
 	})
 	res=res.join("\r\n")
 	
-	var path="/storage/emulated/0/Writer/"
+	var path="/sdcard/Writer/"
 	
 	var d=new Date()
 	try{
