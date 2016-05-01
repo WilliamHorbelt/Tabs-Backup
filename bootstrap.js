@@ -91,10 +91,11 @@ function exportTabs(window){
 	console.log(path);
 	
 	var file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsILocalFile);
+	console.log("after file");
 	file.initWithPath(path);
+	console.log("after init");
 	file.createUnique(Ci.nsIFile.NORMAL_FILE_TYPE,0644);	
-	
-	console.log("before stream");
+	console.log("after create");
 	
 	var foStream = Cc["@mozilla.org/network/file-output-stream;1"].createInstance(Ci.nsIFileOutputStream);
 	foStream.init(file, 0x02 | 0x08 | 0x20, 0666, 0); 
