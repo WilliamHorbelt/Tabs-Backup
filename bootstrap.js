@@ -32,6 +32,8 @@ function unloadFromWindow(window) {
 
 function exportTabs(window){
 	var res=[]
+	
+			window.NativeWindow.toast.show("before loop", "long");
 	window.BrowserApp.tabs.forEach(function(tab){
 		var addr=tab.window.location
     if(addr!="about:blank" && addr!="about:home")
@@ -44,6 +46,10 @@ function exportTabs(window){
   			res.push(zombieAddr)
     }
 	})
+	
+	
+			window.NativeWindow.toast.show("after loop", "long");
+	
 	res=res.join("\r\n")
 	
 	try
@@ -81,6 +87,9 @@ function exportTabs(window){
 	}catch(e){
 		window.NativeWindow.toast.show("Error: "+e,"long");
 	}
+	
+	
+			window.NativeWindow.toast.show("after everything", "long");
 	
 }
 
