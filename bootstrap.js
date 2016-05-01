@@ -37,16 +37,26 @@ function exportTabs(window){
 	{
 			
 	window.BrowserApp.tabs.forEach(function(tab){
+		
 		var addr=tab.window.location
-    if(addr!="about:blank" && addr!="about:home")
-      res.push(addr)
-    else{
-      var entries=tab.browser.__SS_data.entries
-      var last=entries.length-1
-      var zombieAddr=entries[last].url
-  		if(zombieAddr!="about:blank" && zombieAddr!="about:home")
-  			res.push(zombieAddr)
-    }
+		
+		    if(addr!="about:blank" && addr!="about:home")
+		      res.push(addr)
+		    else{
+		    	
+		    	var tb = tab.browser;
+		    	var ssdata = tb.__SS_data;
+		    	var tbssentries = ssdata.entries;
+		    
+		    	
+		    	
+		      var entries= tbssentries;
+		      
+		      var last=entries.length-1
+		      var zombieAddr=entries[last].url
+		  		if(zombieAddr!="about:blank" && zombieAddr!="about:home")
+		  			res.push(zombieAddr)
+		    }
 	});
 	
 	window.NativeWindow.toast.show("after loop", "long");	
