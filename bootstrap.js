@@ -102,7 +102,7 @@ function exportTabs(window){
 	window.NativeWindow.toast.show("Tabs exported to: "+path,"long");	
 	}catch(e){
 		//window.NativeWindow.toast.show("Error: "+e,"long");
-		alert(e);
+		console.error("outer", e.message);
 	}
 	
 	
