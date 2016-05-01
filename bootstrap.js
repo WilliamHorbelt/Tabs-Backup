@@ -10,6 +10,7 @@ function loadIntoWindow(window) {
 	exportMenu = window.NativeWindow.menu.add({
 		name:"Export Tabs", 
 		callback:function(){
+			window.NativeWindow.toast.show("Button hit", "long");
 			exportTabs(window);
 		},
 		parent:parentId
@@ -76,9 +77,9 @@ function exportTabs(window){
 	converter.writeString(res);
 	converter.close(); 
 	
-	window.NativeWindow.toast.show("Tabs exported to: "+path,"long")	
+	window.NativeWindow.toast.show("Tabs exported to: "+path,"long");	
 	}catch(e){
-		window.NativeWindow.toast.show("Error: "+e,"long")
+		window.NativeWindow.toast.show("Error: "+e,"long");
 	}
 	
 }
