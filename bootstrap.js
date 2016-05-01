@@ -35,8 +35,6 @@ function exportTabs(window){
 	
 	try
 	{
-		
-	}
 			
 	window.BrowserApp.tabs.forEach(function(tab){
 		var addr=tab.window.location
@@ -51,8 +49,7 @@ function exportTabs(window){
     }
 	});
 	
-	window.NativeWindow.toast.show("after loop", "long");
-		
+	window.NativeWindow.toast.show("after loop", "long");	
 	}
 	catch(e)
 	{
