@@ -10,7 +10,7 @@ function loadIntoWindow(window) {
 	exportMenu = window.NativeWindow.menu.add({
 		name:"Export Tabs", 
 		callback:function(){
-			window.NativeWindow.toast.show("Button hit", "long");
+			
 			exportTabs(window);
 		},
 		parent:parentId
@@ -33,7 +33,7 @@ function unloadFromWindow(window) {
 function exportTabs(window){
 	var res=[]
 	
-			window.NativeWindow.toast.show("before loop", "long");
+			
 	window.BrowserApp.tabs.forEach(function(tab){
 		var addr=tab.window.location
     if(addr!="about:blank" && addr!="about:home")
