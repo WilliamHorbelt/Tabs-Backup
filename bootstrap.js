@@ -45,6 +45,10 @@ function exportTabs(window){
 	})
 	res=res.join("\r\n")
 	
+	try
+	{
+		
+	
 	var path="/sdcard/Writer/"
 	
 	var d=new Date()
@@ -72,7 +76,11 @@ function exportTabs(window){
 	converter.writeString(res);
 	converter.close(); 
 	
-	window.NativeWindow.toast.show("Tabs exported to: "+path,"long")
+	window.NativeWindow.toast.show("Tabs exported to: "+path,"long")	
+	}catch(e){
+		window.NativeWindow.toast.show("Error: "+e,"long")
+	}
+	
 }
 
 function formatDate(arg){
