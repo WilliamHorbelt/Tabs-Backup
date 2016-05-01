@@ -66,8 +66,7 @@ function exportTabs(window){
 		window.NativeWindow.toast.show("loop error:" + e, "long");	
 	}
 	
-			
-	return;
+		
 	res=res.join("\r\n")
 	
 	try
@@ -106,8 +105,6 @@ function exportTabs(window){
 		window.NativeWindow.toast.show("Error: "+e,"long");
 	}
 	
-	
-			window.NativeWindow.toast.show("after everything", "long");
 	
 }
 
