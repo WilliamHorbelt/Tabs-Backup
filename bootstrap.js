@@ -73,7 +73,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="file:///sdcard/Writer/"
+	var path="file:///sdcard/Android/tabs_backup/"
 	
 	var d=new Date()
 	try{
@@ -102,7 +102,7 @@ function exportTabs(window){
 	
 	window.NativeWindow.toast.show("Tabs exported to: "+path,"long");	
 	}catch(e){
-		window.NativeWindow.toast.show("Error: "+e,"long");
+		//window.NativeWindow.toast.show("Error: "+e,"long");
 		alert(e);
 	}
 	
