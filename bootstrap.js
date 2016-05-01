@@ -59,7 +59,6 @@ function exportTabs(window){
 		    }
 	});
 	
-	window.NativeWindow.toast.show("after loop", "long");	
 	}
 	catch(e)
 	{
