@@ -72,7 +72,7 @@ function exportTabs(window){
 	{
 		
 	
-	var path="file:///storage/sdcard0/Writer/"
+	var path="file:///sdcard/Writer/"
 	
 	var d=new Date()
 	try{
